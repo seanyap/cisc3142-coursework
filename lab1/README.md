@@ -25,8 +25,14 @@ operation correctly.
 git clone https://github.com/seanyap/cisc3142-coursework.git && cd lab1
 ```
 
-2. Run make
+2. Run Makefile to compile and build the project
 
 ```bash
 make lab1
+```
+
+3. Run the executable program
+
+```bash
+./lab1
 ```
