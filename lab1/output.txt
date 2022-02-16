@@ -1,0 +1,13 @@
+--Average Price for Brands--
+ABC: 1
+XYZ: 2
+
+--Average Price for Categories--
+A: 1.6
+B: 1
+C: 1
+
+--Unique Year and SKUs--
+2000 (2) : 111 211 
+2010 (2) : 112 212 
+2020 (5) : 113 213 321 322 323 
