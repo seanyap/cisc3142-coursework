@@ -36,3 +36,9 @@ make lab1
 ```bash
 ./lab1
 ```
+
+Delete object file
+
+```bash
+make clean
+```
