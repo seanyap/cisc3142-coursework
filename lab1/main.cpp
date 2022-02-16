@@ -42,11 +42,23 @@ int main() {
       }
 
       // read column values into their respective vectors
-      vSKU.push_back(stoi(row[0]));
+      stringstream ssku(row[0]); 
+      int iSKU = 0;
+      ssku >> iSKU;
+      vSKU.push_back(iSKU);
+
       vBrand.push_back(row[1]);
       vCategory.push_back(row[2]);
-      vYear.push_back(stoi(row[3]));
-      vPrice.push_back(stof(row[4]));
+
+      stringstream syear(row[3]);
+      int iYear;
+      syear >> iYear;
+      vYear.push_back(iYear);
+
+      stringstream sprice(row[4]);
+      float fPrice;
+      sprice >> fPrice;
+      vPrice.push_back(fPrice);
 
       row_count += 1;
     }
