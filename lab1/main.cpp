@@ -23,7 +23,7 @@ int main() {
   ifstream in_stream; //create a stream object 
   in_stream.open("data.csv", ios_base::in); //opening the file; returns void
 
-  //if the file is open
+  // check if input file is open
   if (in_stream.is_open()) { 
     int row_count = 0;
     while (true) {
@@ -41,7 +41,7 @@ int main() {
         row.push_back(col_data);
       }
 
-      // read column values into their respective vectors
+      // insert column values into their respective vectors
       stringstream ssku(row[0]); 
       int iSKU = 0;
       ssku >> iSKU;
@@ -69,11 +69,13 @@ int main() {
 
     if (out_stream.is_open()) {
       // calculate average price per brand
-      map <string, vector<float> > brand2prices; // brand -> prices
+      map <string, vector<float> > brand2prices; 
+      // populate map data structure: brand(key) -> prices(values)
       for (int i=0; i<vPrice.size(); i++) {
         brand2prices[vBrand[i]].push_back(vPrice[i]);
       }
       
+      // iterate map to sum prices for each brand and find the average price
       map<string, vector<float> >::iterator brand_it;
       out_stream << "--Average Price for Brands--" << endl;
       for (brand_it = brand2prices.begin(); brand_it != brand2prices.end(); brand_it++) {
@@ -87,11 +89,13 @@ int main() {
 	    out_stream << endl;
 
       // calculate average price per category
-      map <string, vector<float> > category2prices; // category -> prices
+      map <string, vector<float> > category2prices; 
+      // populate map data structure: category(key) -> prices(values)
       for (int i=0; i<vPrice.size(); i++) {
         category2prices[vCategory[i]].push_back(vPrice[i]);
       }
       
+      // iterate map to sum prices for each category and find the average price
       map<string, vector<float> >::iterator category_it;
       out_stream << "--Average Price for Categories--" << endl;
       for (category_it = category2prices.begin(); category_it != category2prices.end(); category_it++){
@@ -112,12 +116,13 @@ int main() {
         year2sku[vYear[i]].push_back(sku_str.str());
       }
 
+      // create map data structure to relate relationships between unique year and sku
       map<int, vector<string> >::iterator year_it;
       out_stream << "--Unique Year and SKUs--" << endl;
       for (year_it = year2sku.begin(); year_it != year2sku.end(); year_it++){
         vector<string> cur_year_skus = year_it->second;
         out_stream << year_it->first << " (" << cur_year_skus.size() << ") : ";
-        for (int i=0; i<cur_year_skus.size(); i++){
+        for (int i=0; i<cur_year_skus.size(); i++){ // print all the skus for current year
           out_stream << cur_year_skus[i] << " ";
         }
         out_stream << endl;
