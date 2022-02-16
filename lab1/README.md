@@ -4,7 +4,17 @@ In this lab, I was given a broken program that needs to read in values from a
 CSV file and the task is to fix the program to ensure it is able to perform its
 operation correctly.
 
-#### Operations that the program needed to perform:
+I decided to use the Map data structure provided by the standard library to relate
+or map the relationships between brands & category with all their prices
+to provide quick lookup of all the prices for a particular brand/category instead of
+iterating the separate vectors storing their values over and over again, which is
+not very time efficient. Of course, this is at the expense of space, but I think
+tradeoff is well worth it. I also used the Map data structure to relate the
+relationships between unique years and the respective SKUs in those years for the
+same reason as above, but also to take advantage of the fact that keys in Map
+data structure are unique, which satisfy the condition of this assignment.
+
+#### Program Pseudocode:
 
 - read line by line from the csv file
 - parse out values that are separated by commas
