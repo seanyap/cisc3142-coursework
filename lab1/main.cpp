@@ -1,9 +1,6 @@
-/* This file shows basic functions of reading in a CSV file using C++98
-
-All programs must be able to compile in C++98 standard (the default version on Linux Machine). That means you cannot use the new features of C++11! :(
+/* Class: CISC 3142 
+   Author: Sean Yap
 */
-
-// CISC 3142 - Sean Yap
 
 #include <iostream>
 #include <string>
