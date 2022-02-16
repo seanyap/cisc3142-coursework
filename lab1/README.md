@@ -4,6 +4,8 @@ In this lab, I was given a broken program that needs to read in values from a
 CSV file and the task is to fix the program to ensure it is able to perform its
 operation correctly.
 
+#### Motivation for Data Structure used
+
 I decided to use the Map data structure provided by the standard library to relate
 or map the relationships between brands & category with all their prices
 to provide quick lookup of all the prices for a particular brand/category instead of
