@@ -15,7 +15,7 @@ operation correctly.
 
 #### Data flow sketches
 
-![data flow sketches](./data-flow-sketches.png)
+![data flow sketches](./dataflow-sketch.png)
 
 ### Setup Instructions
 
